@@ -63,13 +63,13 @@ setInterval(()=>{
   <div v-else-if="state==State.Scan" class="scan">
     <h1>スキャン中...</h1>
     <span class="loader">{{ loader }}</span><br>
-    <span class="volume">{{ Math.round(scanValue) }}MB</span>
+    <span class="volume">{{ Math.round(progress) }}MB</span>
   </div>
 
   <div v-else-if="state==State.Clean" class="scan">
     <h1>クリーンアップ中...</h1>
     <span class="loader">{{ loader }}</span><br>
-    <span class="volume">{{ Math.round(scanValue) }}MB / {{ Math.round(volume) }}MB</span>
+    <span class="volume">{{ Math.round(progress) }}MB / {{ Math.round(volume) }}MB</span>
   </div>
 
   <div v-else class="complete">
