@@ -53,25 +53,30 @@ setInterval(()=>{
 </script>
 
 <template>
+
   <template v-if="state==State.Home" class="home">
     <h1>メモリクリーナー</h1>
     <p>デバイスのメモリをクリーンアップします</p>
     <button @click="state=State.Scan">クリーンアップ</button>
   </template>
+
   <div v-else-if="state==State.Scan" class="scan">
     <h1>スキャン中...</h1>
     <span class="loader">{{ loader }}</span><br>
     <span class="volume">{{ Math.round(scanValue) }}MB</span>
   </div>
+
   <div v-else-if="state==State.Clean" class="scan">
     <h1>クリーンアップ中...</h1>
     <span class="loader">{{ loader }}</span><br>
     <span class="volume">{{ Math.round(scanValue) }}MB / {{ Math.round(volume) }}MB</span>
   </div>
+
   <div v-else class="complete">
     <h1>クリーンアップが完了しました</h1>
     <p>あなたは安心してデバイスを使えます</p>
   </div>
+  
 </template>
 
 <style scoped>
