@@ -76,7 +76,7 @@ setInterval(()=>{
     <h1>クリーンアップが完了しました</h1>
     <p>あなたは安心してデバイスを使えます</p>
   </div>
-  
+
 </template>
 
 <style scoped>
@@ -100,7 +100,7 @@ button{
 button:hover{
   background: greenyellow;
 }
-div{
+div{ /* 背景を完全に満たすスタイル */
   background: springgreen;
   position: fixed;
   left: 0;
